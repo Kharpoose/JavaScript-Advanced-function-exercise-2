@@ -33,3 +33,16 @@ function added() {
     message.innerHTML = "";
   }, 2000);
 }
+
+let message = 2;
+
+setInterval(function () {
+  if (message < 1) {
+    message = 0;
+    document.title = "Function";
+  } else if (document.title === "Function") {
+    document.title = `(${message}) New messages`;
+  } else {
+    document.title = "Function";
+  }
+}, 1000);
